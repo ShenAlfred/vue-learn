@@ -1,0 +1,18 @@
+{
+  "name": "vue-learn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "vue": "^2.1.6"
+  },
+  "devDependencies": {
+    "gulp-inject": "^4.1.0",
+    "gulp-server-livereload": "^1.9.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

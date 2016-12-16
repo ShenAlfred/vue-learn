@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/src/css/index.css">
+    <!-- endinject -->
+</head>
+<body>
+    <div id="app">
+        <ol>
+            <todo-item v-for="item in List" v-bind:td="item"></todo-item>
+        </ol>
+    </div>
+    <div id="app7" v-once>
+        {{ a }}
+    </div>
+    <div id="bindHtml" v-html="rawHtml"></div>
+    <button id="btn" v-bind:disabled="someDynamicCondition">Button</button>
+<!-- inject:js -->
+<script src="/node_modules/vue/dist/vue.js"></script>
+<script src="/src/js/index.js"></script>
+<!-- endinject -->
+</body>
+</html>
