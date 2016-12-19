@@ -18,6 +18,41 @@
     </div>
     <div id="bindHtml" v-html="rawHtml"></div>
     <button id="btn" v-bind:disabled="someDynamicCondition">Button</button>
+    <div id="todo-example">
+        <input type="text"
+                v-model="newtodo"
+               v-on:keyup.enter="addNewTodo"
+                placeholder="add new todo"
+        />
+        <ul>
+            <li v-for="(todo, index) in todos">
+                {{todo}}
+                <button v-on:click="remove(index)">x</button>
+            </li>
+        </ul>
+    </div>
+    <div id="example-1">
+        <button v-on:click="counter += 1">增加 1</button>
+        <p>这个按钮被点击了 {{ counter }} 次。</p>
+    </div>
+    <div id="student">
+        <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+        <label for="jack">Jack</label>
+        <input type="checkbox" id="john" value="John" v-model="checkedNames">
+        <label for="john">John</label>
+        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+        <label for="mike">Mike</label>
+        <br>
+        <span>Checked names: {{ checkedNames }}</span>
+    </div>
+
+
+    <div id="components">
+        <props-component message="alfred"></props-component>
+        <my-component></my-component>
+    </div>
+
+
 <!-- inject:js -->
 <script src="/node_modules/vue/dist/vue.js"></script>
 <script src="/src/js/index.js"></script>
